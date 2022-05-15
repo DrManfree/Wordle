@@ -70,7 +70,7 @@ body {
     height: 100%;
 }
 .board-letter {
-    border: none;
+    border: 1px solid darkgray;
     outline: none;
     background: rgb(146, 146, 146);
     color: white;
@@ -79,6 +79,7 @@ body {
     padding: 0 2.5vw;
     font-size: 3vw;
     height: 80%;
+    -webkit-appearance: none;
 }
 .board-letter:hover {
     background: rgb(95, 95, 95);
