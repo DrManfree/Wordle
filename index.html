@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wordle - A game of words!</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script type="module" src="script.js"></script>
+    </head>
+    <body>
+        <header class="top-info">
+            <button class="help" title="Об игре">
+                <img src="rsc/help.svg"/>
+            </button>
+            <button class="new" title="Новая игра">
+                <img src="rsc/challenge.svg"/>
+            </button>
+            <h2 class="title">
+                WORDLE (RU)
+            </h2>
+            <button class="stats" title="Статистика">
+                <img src="rsc/stats.svg"/>
+            </button>
+            <button class="settings" title="Настройки">
+                <img src="rsc/settings.svg"/>
+            </button>
+        </header>
+        <div class="game-content">
+            <div class="word-row">
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+            <div class="word-row">
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+                <div class="word-row">
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+            <div class="word-row">
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+            <div class="word-row">
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+            <div class="word-row">
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+                <div class="letter-box"></div>
+            </div>
+        </div>
+        <div class="keyboard">
+            <div class="letter-row">
+                <button class="board-letter" data-action="addLetter">Й</button>
+                <button class="board-letter" data-action="addLetter">Ц</button>
+                <button class="board-letter" data-action="addLetter">У</button>
+                <button class="board-letter" data-action="addLetter">К</button>
+                <button class="board-letter" data-action="addLetter">Е</button>
+                <button class="board-letter" data-action="addLetter">Н</button>
+                <button class="board-letter" data-action="addLetter">Г</button>
+                <button class="board-letter" data-action="addLetter">Ш</button>
+                <button class="board-letter" data-action="addLetter">Щ</button>
+                <button class="board-letter" data-action="addLetter">З</button>
+                <button class="board-letter" data-action="addLetter">Х</button>
+                <button class="board-letter" data-action="addLetter">Ъ</button>
+            </div>
+            <div class="letter-row">
+                <button class="board-letter" data-action="addLetter">Ф</button>
+                <button class="board-letter" data-action="addLetter">Ы</button>
+                <button class="board-letter" data-action="addLetter">В</button>
+                <button class="board-letter" data-action="addLetter">А</button>
+                <button class="board-letter" data-action="addLetter">П</button>
+                <button class="board-letter" data-action="addLetter">Р</button>
+                <button class="board-letter" data-action="addLetter">О</button>
+                <button class="board-letter" data-action="addLetter">Л</button>
+                <button class="board-letter" data-action="addLetter">Д</button>
+                <button class="board-letter" data-action="addLetter">Ж</button>
+                <button class="board-letter" data-action="addLetter">Э</button>
+            </div>
+            <div class="letter-row">
+                <button id="erase" class="board-letter" data-action="erase">
+                    <img src="rsc/erase.svg"/>
+                </button>
+                <button class="board-letter" data-action="addLetter">Я</button>
+                <button class="board-letter" data-action="addLetter">Ч</button>
+                <button class="board-letter" data-action="addLetter">С</button>
+                <button class="board-letter" data-action="addLetter">М</button>
+                <button class="board-letter" data-action="addLetter">И</button>
+                <button class="board-letter" data-action="addLetter">Т</button>
+                <button class="board-letter" data-action="addLetter">Ь</button>
+                <button class="board-letter" data-action="addLetter">Б</button>
+                <button class="board-letter" data-action="addLetter">Ю</button>
+                <button id="enter" class="board-letter" data-action="enter">ВВОД</button>
+            </div>
+        </div>
+    </body>
+</html>
