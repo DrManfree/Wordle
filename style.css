@@ -13,21 +13,29 @@ body {
     color: white;
     border-bottom: 1px solid gray;
     margin-bottom: 5px;
-    height: 70px;
+    height: 50px;
 }
 .title {
     text-align: center;
+    line-height: 5%;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
     flex-grow: 2;
 }
 .top-info button {
     background: none;
+    outline: none;
+    border: none;
+}
+.top-info button img {
+    width: 100%;
+    height: auto;
 }
 .letter-box {
     background: none;
     border: 2px solid gray;
-    width: 9vh;
-    height: 9vh;
+    width: 8vh;
+    height: 8vh;
     color: white;
     text-align: center;
     font-size: 7vh;
@@ -37,17 +45,17 @@ body {
 .game-content {
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
     min-height: calc(100vh - 70px - 33vh);
 }
 .word-row {
     display: flex;
-    margin: auto;
+    margin: 2px auto;
 }
 .keyboard {
     margin-top: 5px;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 70px - 66vh);
     margin-bottom: 5px;
 }
 .letter-row {
@@ -59,10 +67,10 @@ body {
     background: rgb(146, 146, 146);
     color: white;
     border-radius: 10px;
-    width: auto;
-    min-width: 40px;
-    min-height: 40px;
+    width: 8vh;
+    height: 8vh;
     transition: 0.5s;
+    font-size: 4vh;
 }
 .board-letter:hover {
     background: rgb(95, 95, 95);
@@ -70,6 +78,9 @@ body {
 #erase img {
     width: 100%;
     height: auto;
+}
+#enter {
+    width: 20%;
 }
 button:hover{
     cursor: pointer;
