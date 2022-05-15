@@ -13,7 +13,7 @@ body {
     color: white;
     border-bottom: 1px solid gray;
     margin-bottom: 5px;
-    height: 50px;
+    height: auto;
 }
 .title {
     text-align: center;
@@ -29,7 +29,7 @@ body {
 }
 .top-info button img {
     width: 100%;
-    min-width: 50px;
+    min-width: 10vh;
     height: auto;
 }
 .letter-box {
