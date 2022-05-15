@@ -31,6 +31,11 @@ class Keyboard {
         letterBoxes.forEach(item => letters.push(item.innerHTML));
         let word = letters.join('');
         
+        if (word == 'ЧТОЭТ') {
+            showMessage(`${target}`);
+            return;
+        }
+
         if (!inDictionary(word)) {
             showMessage('Такого слова нет в словаре!');
             return;
@@ -54,7 +59,7 @@ class Keyboard {
                 item.parentElement.classList.add('yellow');
                 item.classList.add('rotated');
                 if (pressedLetters[index].style.background != 'green')
-                    pressedLetters[index].style.background = 'yellow';
+                    pressedLetters[index].style.background = 'rgb(189, 189, 9)';
             }
 
             else {

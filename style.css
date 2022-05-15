@@ -5,6 +5,7 @@ body {
     display: grid;
     grid-template-rows: auto 2fr 1fr;
     position: relative;
+    user-select: none;
 }
 .top-info {
     position: relative;
