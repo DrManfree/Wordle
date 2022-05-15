@@ -76,6 +76,7 @@ body {
 }
 .board-letter:focus {
     outline: none;
+    border: none;
 }
 #erase img {
     width: 100%;
