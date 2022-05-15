@@ -19,7 +19,6 @@ body {
     text-align: center;
     line-height: 5%;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2em;
     flex-grow: 2;
 }
 .top-info button {
