@@ -71,6 +71,7 @@ body {
 }
 .board-letter {
     border: none;
+    outline: none;
     background: rgb(146, 146, 146);
     color: white;
     border-radius: 10px;
