@@ -29,6 +29,7 @@ body {
 }
 .top-info button img {
     width: 100%;
+    min-width: 50px;
     height: auto;
 }
 .letter-box {
@@ -45,7 +46,6 @@ body {
 .game-content {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
     min-height: calc(100vh - 70px - 33vh);
 }
 .word-row {
@@ -67,10 +67,10 @@ body {
     background: rgb(146, 146, 146);
     color: white;
     border-radius: 10px;
-    width: 8vh;
-    height: 8vh;
     transition: 0.5s;
-    font-size: 4vh;
+    padding: 0 2.5vw;
+    font-size: 3vw;
+    height: 80%;
 }
 .board-letter:hover {
     background: rgb(95, 95, 95);
