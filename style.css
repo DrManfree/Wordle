@@ -74,6 +74,9 @@ body {
 .board-letter:hover {
     background: rgb(95, 95, 95);
 }
+.board-letter:focus {
+    outline: none;
+}
 #erase img {
     width: 100%;
     height: auto;
