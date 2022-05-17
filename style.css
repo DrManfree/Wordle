@@ -170,6 +170,9 @@ button:hover{
     padding: 10px;
     display: none;
 }
+.help-tab{
+    overflow: scroll;
+}
 .switch {
     position: relative;
     display: inline-block;
