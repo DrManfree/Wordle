@@ -116,6 +116,8 @@ window.onload = function() {
     new Keyboard(document.querySelector('.keyboard'));
     document.querySelector('.new').onclick = newGame;
     document.querySelector('.help').onclick = showHelp;
+    document.querySelector('.settings').onclick = showSettings;
+    document.querySelector('.switch').onchange = toggleDark;
 };
 
 function showMessage(message) {
@@ -134,6 +136,8 @@ function inDictionary(word) {
 }
 
 function newGame() {
+    let rly = confirm('Начать новую игру?');
+    if (!rly) return;
     target = WORDS[Math.floor(Math.random() * WORDS.length)].toUpperCase();
     win = false;
     console.log(target);
@@ -152,41 +156,41 @@ function newGame() {
 }
 
 function showHelp() {
-    if (document.querySelector('.help-tab')) {
-        document.querySelector('.help-tab').remove();
+    if (document.querySelector('.help-tab').style.display == 'block') {
+        document.querySelector('.help-tab').style.setProperty('display','none');
         return;
     }
-    if (document.querySelector('.tab')) {
-        document.querySelector('.tab').remove();
-    }
-    let content = '';
-    content +=
-`<p>
-Цель Wordle - отгадать загаданное слово из 5 букв.<br>
-Игрок по буквам вписывает слово и отправляет его на проверку.
-Если слово существует в словаре, но не является загаданным,
-тратиться попытка и буквы введенного слова выделяются по следующим правилам:
-<ul>
-<li>Если буквы в загаданном слове нет, она выделяется серой.</li>
-<li>Если буква находится на той же позиции в загаданном слове, она выделяется зеленой.</li>
-<li>Если буква есть, но находится на другой позиции, она выделяется желтой.</li>
-</ul>
-На отгадывание слова дается 6 попыток.<br>
-Буквы в словах могут повторяться.<br>
-Все слова - существительные единственного числа из 5 букв.<br>
-Удачи!<br>
-<br>
-<br>
-Чтобы показать загаданное слово, введите "ЧТОЭТ" и нажмите ввод.</p>`;
-    showTab(content, 'help-tab');
+    document.querySelectorAll('.tab').forEach(item => {
+        if (item.style.display == 'block')
+        item.style.setProperty('display', 'none');
+    });
+    document.querySelector('.help-tab').style.setProperty('display','block');
 }
 
-function showTab(content, type) {
-    let tab = document.createElement('div');
-    document.body.appendChild(tab);
-    tab.className = 'tab';
-    tab.classList.add(type);
-    tab.innerHTML = content;
+function showSettings() {
+    if (document.querySelector('.settings-tab').style.display == 'block') {
+        document.querySelector('.settings-tab').style.setProperty('display','none');
+        return;
+    }
+    document.querySelectorAll('.tab').forEach(item => {
+        if (item.style.display == 'block')
+        item.style.setProperty('display', 'none');
+    });
+    document.querySelector('.settings-tab').style.setProperty('display','block');
+}
+
+function toggleDark() {
+    let input = document.querySelector('#darktheme');
+    if (input.checked) {
+        document.body.classList.add('dark');
+        document.querySelectorAll('.tab')
+        .forEach(item => item.classList.add('dark'));
+    }
+    else {
+        document.body.classList.remove('dark');
+        document.querySelectorAll('.tab')
+        .forEach(item => item.classList.remove('dark'));
+    }
 }
 
 let currentRow = 0;
