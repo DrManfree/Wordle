@@ -115,6 +115,7 @@ class Keyboard {
 window.onload = function() {
     new Keyboard(document.querySelector('.keyboard'));
     document.querySelector('.new').onclick = newGame;
+    document.querySelector('.help').onclick = showHelp;
 };
 
 function showMessage(message) {
@@ -147,6 +148,45 @@ function newGame() {
         item.className = "letter-box";
         item.style.background = '';
     });
+    showMessage('Новая игра начата.');
+}
+
+function showHelp() {
+    if (document.querySelector('.help-tab')) {
+        document.querySelector('.help-tab').remove();
+        return;
+    }
+    if (document.querySelector('.tab')) {
+        document.querySelector('.tab').remove();
+    }
+    let content = '';
+    content +=
+`<p>
+Цель Wordle - отгадать загаданное слово из 5 букв.<br>
+Игрок по буквам вписывает слово и отправляет его на проверку.
+Если слово существует в словаре, но не является загаданным,
+тратиться попытка и буквы введенного слова выделяются по следующим правилам:
+<ul>
+<li>Если буквы в загаданном слове нет, она выделяется серой.</li>
+<li>Если буква находится на той же позиции в загаданном слове, она выделяется зеленой.</li>
+<li>Если буква есть, но находится на другой позиции, она выделяется желтой.</li>
+</ul>
+На отгадывание слова дается 6 попыток.<br>
+Буквы в словах могут повторяться.<br>
+Все слова - существительные единственного числа из 5 букв.<br>
+Удачи!<br>
+<br>
+<br>
+Чтобы показать загаданное слово, введите "ЧТОЭТ" и нажмите ввод.</p>`;
+    showTab(content, 'help-tab');
+}
+
+function showTab(content, type) {
+    let tab = document.createElement('div');
+    document.body.appendChild(tab);
+    tab.className = 'tab';
+    tab.classList.add(type);
+    tab.innerHTML = content;
 }
 
 let currentRow = 0;

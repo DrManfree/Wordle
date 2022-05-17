@@ -5,16 +5,16 @@ body {
     margin: 0;
     background: black;
     display: grid;
-    grid-template-rows: auto 2fr 1fr;
+    grid-template-rows: auto 5fr 5fr;
     position: relative;
     user-select: none;
+    color: white;
 }
 .top-info {
     position: relative;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    color: white;
     border-bottom: 1px solid gray;
     margin-bottom: 5px;
     height: auto;
@@ -34,6 +34,11 @@ body {
     background: none;
     outline: none;
     border: none;
+    transition: 0.5s;
+    transition-property: background;
+}
+.top-info button:hover {
+    background:rgba(255, 255, 255, 0.452);
 }
 .top-info button img {
     width: 100%;
@@ -45,7 +50,6 @@ body {
     border: 2px solid gray;
     width: 8vh;
     height: 8vh;
-    color: white;
     text-align: center;
     font-size: 7vh;
     font-family:'Courier New', Courier, monospace;
@@ -73,9 +77,9 @@ body {
 }
 .board-letter {
     border: 1px solid darkgray;
+    color: white;
     outline: none;
     background: rgb(146, 146, 146);
-    color: white;
     border-radius: 10px;
     transition: 0.5s;
     padding: 0 2.5vw;
@@ -152,8 +156,18 @@ button:hover{
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
+.tab {
+    position: absolute;
+    height: calc(var(--vh, 1vh) * 80);
+    width: 50vw;
+    background: black;
+    left: 25vw;
+    top: calc(var(--vh, 1vh) * 10);
+    border: 5px solid gray;
+    text-align: center;
+    padding: 10px;
+}
 .message {
-    color: white;
     background: rgba(0, 0, 0, 0.801);
     border: 1px solid gray;
     border-radius: 20px;
