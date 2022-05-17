@@ -54,7 +54,7 @@ body {
 .game-content {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 70px - 33vh);
+    min-height: calc(calc(var(--vh, 1vh) * 66) - 70px);
 }
 .word-row {
     display: flex;
